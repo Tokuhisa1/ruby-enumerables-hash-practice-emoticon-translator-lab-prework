@@ -19,8 +19,8 @@ def get_japanese_emoticon(path, emoticon)
   # code goes here
   puts emoticon
   load_library(path).each do | translation, meaning |
-    if meaning[:japanese] == emoticon
-      return translation
+    if meaning[:english] == emoticon
+      return meaning[:japanese]
     end
   end
 end
